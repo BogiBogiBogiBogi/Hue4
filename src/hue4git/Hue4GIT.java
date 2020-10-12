@@ -1,21 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hue4git;
 
-/**
- *
- * @author User
- */
+import java.io.File;
+import java.util.ArrayList;
+
 public class Hue4GIT {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        File file = new File("numbers.csv");
+        Reader reader = new Reader(file);
+
+        ArrayList<String> list = reader.readFile();
+
+        list.forEach(System.out::println);
     }
-    
 }
